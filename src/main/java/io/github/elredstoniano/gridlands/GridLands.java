@@ -14,7 +14,7 @@ public class GridLands {
     public GridLands() {
         // Registrando los items en el event bus
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-
+    // test 2
         ItemsInit.ITEMS.register(bus);
         BlocksInit.BLOCKS.register(bus);
         CreativeTabsInit.TABS.register(bus);
