@@ -1,5 +1,14 @@
 {
   "item.gridlands.green_apple" : "Manzana verde",
   "block.gridlands.green_apple_block" : "Bloque de manzana verde",
-  "itemGroup.mod_food_tab": "Tabla de comida del mod"
+  "itemGroup.mod_food_tab": "Tabla de comida del mod",
+  "item.gridlands.green_apple_sword": "Espada de Manzana Verde",
+  "item.gridlands.green_apple_pickaxe": "Pico de Manzana Verde",
+  "item.gridlands.green_apple_axe": "Hacha de Manzana Verde",
+  "item.gridlands.green_apple_shovel": "Pala de Manzana Verde",
+  "item.gridlands.green_apple_hoe": "Azada de Manzana Verde",
+  "item.gridlands.green_apple_helmet": "Casco de Manzana Verde",
+  "item.gridlands.green_apple_chestplate": "Pechera de Manzana Verde",
+  "item.gridlands.green_apple_leggings": "Pantalones de Manzana Verde",
+  "item.gridlands.green_apple_boots": "Botas de Manzana Verde"
 }

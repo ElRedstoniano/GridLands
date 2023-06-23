@@ -1,5 +1,14 @@
 {
   "item.gridlands.green_apple" : "Green apple",
   "block.gridlands.green_apple_block": "Green apple block",
-  "itemGroup.mod_food_tab": "Food mod tab"
+  "itemGroup.mod_food_tab": "Food mod tab",
+  "item.gridlands.green_apple_sword": "Green Apple Sword",
+  "item.gridlands.green_apple_pickaxe": "Green Apple Pickaxe",
+  "item.gridlands.green_apple_axe": "Green Apple Axe",
+  "item.gridlands.green_apple_shovel": "Green Apple Shovel",
+  "item.gridlands.green_apple_hoe": "Green Apple Hoe",
+  "item.gridlands.green_apple_helmet": "Green Apple Helmet",
+  "item.gridlands.green_apple_chestplate": "Green Apple ChestPlate",
+  "item.gridlands.green_apple_leggings": "Green Apple Leggings",
+  "item.gridlands.green_apple_boots": "Green Apple Boots"
 }
