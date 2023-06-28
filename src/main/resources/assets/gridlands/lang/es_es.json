@@ -10,5 +10,7 @@
   "item.gridlands.green_apple_helmet": "Casco de Manzana Verde",
   "item.gridlands.green_apple_chestplate": "Pechera de Manzana Verde",
   "item.gridlands.green_apple_leggings": "Pantalones de Manzana Verde",
-  "item.gridlands.green_apple_boots": "Botas de Manzana Verde"
+  "item.gridlands.green_apple_boots": "Botas de Manzana Verde",
+  "block.gridlands.green_apple_ore": "Mena de Manzana Verde",
+  "block.gridlands.deepslate_green_apple_ore": "Mena de Manzana Verde de Pizarra Profunda"
 }

@@ -7,7 +7,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 
 public class TagInit {
-    public static final TagKey<Block> NEEDS_APPLE_TOOL = tag("");
+    public static final TagKey<Block> NEEDS_APPLE_TOOL = tag("needs_apple_tool");
 
     private static TagKey<Block> tag(String name){
         return BlockTags.create(new ResourceLocation(GridLands.MODID, name));

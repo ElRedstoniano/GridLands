@@ -131,4 +131,15 @@ public class ItemsInit {
                             new Item.Properties()
                     ))
     );
+
+    //////
+    public static final RegistryObject<BlockItem> GREEN_APPLE_ORE_ITEM = addToTab(
+            ITEMS.register("green_apple_ore",
+                    () -> new BlockItem(BlocksInit.GREEN_APPLE_ORE.get(),
+                            new Item.Properties())));
+
+    public static final RegistryObject<BlockItem> DEEPSLATE_GREEN_APPLE_ORE_ITEM = addToTab(
+            ITEMS.register("deepslate_green_apple_ore",
+                    () -> new BlockItem(BlocksInit.DEEPSLATE_GREEN_APPLE_ORE.get(),
+                            new Item.Properties())));
 }

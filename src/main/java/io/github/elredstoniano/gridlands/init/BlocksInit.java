@@ -1,8 +1,10 @@
 package io.github.elredstoniano.gridlands.init;
 
 import io.github.elredstoniano.gridlands.GridLands;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -25,6 +27,20 @@ public class BlocksInit {
                     .requiresCorrectToolForDrops() // para asegurarse de que se tiene que romper con
                     // la herramienta correcta, y si no no soltar nada
                     .pushReaction(PushReaction.DESTROY) // Al empujar con pistones, el bloque se destruirá
+            ));
+
+    public static final RegistryObject<DropExperienceBlock> GREEN_APPLE_ORE = BLOCKS.register("green_apple_ore",
+            () -> new DropExperienceBlock(
+                    BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE),
+                    UniformInt.of(4, 7)
+                    //ConstantInt.Properties.copy
+                    ));
+
+    public static final RegistryObject<DropExperienceBlock> DEEPSLATE_GREEN_APPLE_ORE = BLOCKS.register("deepslate_green_apple_ore",
+            () -> new DropExperienceBlock(
+                    BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_DIAMOND_ORE),
+                    UniformInt.of(4, 7)
+                    //ConstantInt.Properties.copy
             ));
 
     // Alternativa
