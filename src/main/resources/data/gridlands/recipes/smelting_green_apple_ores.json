@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "gridlands:green_apple_ores"
+  },
+  "result": "gridlands:green_apple",
+  "experience": 0.7,
+  "cookingtime": 200
+}

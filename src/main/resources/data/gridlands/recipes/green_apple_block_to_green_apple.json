@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gridlands:green_apple_block"
+    }
+  ],
+  "result": {
+    "item": "gridlands:green_apple",
+    "count": 9
+  }
+}
