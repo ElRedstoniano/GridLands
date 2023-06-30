@@ -12,5 +12,7 @@
   "item.gridlands.green_apple_leggings": "Green Apple Leggings",
   "item.gridlands.green_apple_boots": "Green Apple Boots",
   "block.gridlands.green_apple_ore": "Green Apple Ore",
-  "block.gridlands.deepslate_green_apple_ore": "Deepslate Green Apple Ore"
+  "block.gridlands.deepslate_green_apple_ore": "Deepslate Green Apple Ore",
+  "entity.gridlands.green_apple_pig": "Green Apple Pig",
+  "item.gridlands.green_apple_pig_spawn_egg": "Green Apple Pig Spawn Egg"
 }

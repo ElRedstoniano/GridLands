@@ -5,6 +5,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -142,4 +143,9 @@ public class ItemsInit {
             ITEMS.register("deepslate_green_apple_ore",
                     () -> new BlockItem(BlocksInit.DEEPSLATE_GREEN_APPLE_ORE.get(),
                             new Item.Properties())));
+
+    public static final RegistryObject<ForgeSpawnEggItem> GREEN_APPLE_PIG_SPAWN_EGG = addToTab(
+            ITEMS.register("green_apple_pig_spawn_egg",
+                    () -> new ForgeSpawnEggItem(EntityInit.GREEN_APPLE_MAN, 0x308219, 0x47DE1D, new Item.Properties()))
+    );
 }
