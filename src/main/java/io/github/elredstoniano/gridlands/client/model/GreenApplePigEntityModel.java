@@ -13,14 +13,24 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 
 public class GreenApplePigEntityModel<T extends GreenApplePigEntity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(GridLands.MODID, "green_apple_pig"), "main");
-	private final ModelPart body;
+	private final ModelParts parts;
 
 	public GreenApplePigEntityModel(ModelPart root) {
-		this.body = root.getChild("body");
+		//this.body = root.getChild("body");
+		ModelPart body = root.getChild("body");
+		ModelPart head = body.getChild("head");
+		ModelPart legs = body.getChild("legs");
+		ModelPart frontLeftLeg = legs.getChild("frontLeft");
+		ModelPart frontRightLeg = legs.getChild("frontRight");
+		ModelPart backLeftLeg = legs.getChild("backLeft");
+		ModelPart backRightLeg = legs.getChild("backRight");
+
+		this.parts = new ModelParts(body, head, legs, frontLeftLeg, frontRightLeg, backLeftLeg, backRightLeg);
 	}
 
 	public static LayerDefinition createBodyLayer() {
@@ -46,11 +56,24 @@ public class GreenApplePigEntityModel<T extends GreenApplePigEntity> extends Ent
 
 	@Override
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-
+		//if (entity.isInPowderSnow)// se puede cambiar la animacion respecto al estado de la entidad
+		// En vez de usar Math.toRadians(var):
+		// this.parts.head.yRot = netHeadYaw * ( (float) Math.PI / 100f); // convirtiendo a radianes // yaw
+		this.parts.head().yRot = netHeadYaw * Mth.DEG_TO_RAD;
+		this.parts.head().xRot = headPitch * Mth.DEG_TO_RAD;
+		this.parts.frontLeftLeg().xRot = Mth.cos(limbSwing * 0.6662F) /*numero "mágico"*/
+			* 1.4F * limbSwingAmount;
+		this.parts.frontRightLeg().xRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI)
+				* 1.4F * limbSwingAmount; // + (float) Math.PI es para hacer que se mueva hacia la dirección contratia
+		// Se repite lo mismo pero con las otras 2 piernas e invirtiendo la dirección del lado contrario al anterior
+		this.parts.backLeftLeg().xRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * 1.4F * limbSwingAmount;
+		this.parts.backRightLeg().xRot = Mth.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
 	}
 
 	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-		body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		this.parts.body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
+
+	private record ModelParts(ModelPart body, ModelPart head, ModelPart legs, ModelPart frontLeftLeg, ModelPart frontRightLeg, ModelPart backLeftLeg, ModelPart backRightLeg){}
 }
