@@ -14,5 +14,6 @@
   "block.gridlands.green_apple_ore": "Mena de Manzana Verde",
   "block.gridlands.deepslate_green_apple_ore": "Mena de Manzana Verde de Pizarra Profunda",
   "entity.gridlands.green_apple_pig": "Cerdo de manzana verde",
-  "item.gridlands.green_apple_pig_spawn_egg": "Generar Cerdo de manzana verde"
+  "item.gridlands.green_apple_pig_spawn_egg": "Generar Cerdo de manzana verde",
+  "generator.minecraft.grid_lands": "Test Preset"
 }

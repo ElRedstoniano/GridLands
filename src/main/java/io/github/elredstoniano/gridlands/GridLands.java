@@ -1,5 +1,6 @@
 package io.github.elredstoniano.gridlands;
 
+import io.github.elredstoniano.gridlands.events.RegisterWorldPreset;
 import io.github.elredstoniano.gridlands.init.BlocksInit;
 import io.github.elredstoniano.gridlands.init.CreativeTabsInit;
 import io.github.elredstoniano.gridlands.init.EntityInit;
@@ -15,6 +16,7 @@ public class GridLands {
     public GridLands() {
         // Registrando los items en el event bus
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+        //bus.addListener(RegisterWorldPreset::testEvent);
     // test 2
         ItemsInit.ITEMS.register(bus);
         BlocksInit.BLOCKS.register(bus);

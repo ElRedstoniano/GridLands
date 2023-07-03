@@ -12,6 +12,7 @@ import net.minecraft.client.model.ShieldModel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ShieldItem;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterPresetEditorsEvent;
 import net.minecraftforge.client.event.ScreenEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -49,5 +50,10 @@ public class ScreensEventsTest {
             // Reload UI
             ((CreateWorldScreen) event.getScreen()).repositionElements();
         }
+    }
+
+    @SubscribeEvent
+    public static void testEvent(RegisterPresetEditorsEvent event){
+        LOGGER.info("TESTSSSSSSSSSSSSSSSSS");
     }
 }
